@@ -2,3 +2,5 @@
 .DS_Store
 # 문서파일 예외처리
 *.pdf
+
+# DS file is removed from git GUI. Commit .gitignore once again.
