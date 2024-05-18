@@ -4,70 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>6.calendar.html</title>
+    <link rel="styleseeht" href="6.calendar.css">
+    <style>
+        h1, h2{
+            text-align: center;
+        }
+        #calendar{
+            width: 100%;
+            height: 200px;
+            border: 1px solid;
+        }
+        #calendar th{
+            background-color: aqua;
+            padding: 5px;
+            width: 14%;
+        }
+        #calendar td{
+            text-align: center;
+            padding:10px;
+        }
+        #calendar th:last-child, #calendar td:last-child{
+            color:red;
+        }
+        #calendar th:nth-child(6), #calendar td:nth-child(6){
+            color: blue
+        }
+    </style>
 </head>
 <body>
-    <center>
     <h1>Photo Calendar</h1>
     <h2>2024.05</h2>
-    <img src="images/panda.jpeg" width="100%" height="200">
-    <table border="1" width="80%">
-        <tr>
-            <td width="14%" align="center" style="color: red;">Mon</td>
-            <td width="14%" align="center">Tue</td>
-            <td width="14%" align="center">Wed</td>
-            <td width="14%" align="center">Thu</td>
-            <td width="14%" align="center">Fri</td>
-            <td width="14%" align="center" style="color: blue;">Sat</td>
-            <td width="14%" align="center">Sun</td>
-        </tr>
+    <img src="class_images/APRIL-nike.jpg" width="100%" height="200">
+    
+    <table id="calendar">
+        <th>
+            <td>Mon</td>
+            <td>Tue</td>
+            <td>Wed</td>
+            <td>Thu</td>
+            <td>Fri</td>
+            <td>Sat</td>
+            <td>Sun</td>
+        </th>
         <tr>
             <td></td>
             <td></td>
-            <td align="center">1</td>
-            <td align="center">2</td>
-            <td align="center">3</td>
-            <td align="center" style="color: blue;">4</td>
-            <td align="center" style="color: red;">5</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
 
         </tr>
         <tr>
-            <td align="center">6</td>
-            <td align="center">7</td>
-            <td align="center">8</td>
-            <td align="center">9</td>
-            <td align="center">10</td>
-            <td align="center" style="color: blue;">11</td>
-            <td align="center" style="color: red;">12</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
         </tr>
         <tr>
-            <td align="center">13</td>
-            <td align="center">14</td>
-            <td align="center" style="color: red;">15</td>
-            <td align="center">16</td>
-            <td align="center">17</td>
-            <td align="center" style="color: blue;">18</td>
-            <td align="center" style="color: red;">19</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
         </tr>
         <tr>
-            <td align="center">20</td>
-            <td align="center">21</td>
-            <td align="center">22</td>
-            <td align="center">23</td>
-            <td align="center">24</td>
-            <td align="center" style="color: blue;">25</td>
-            <td align="center" style="color: red;">26</td>
+            <td>20</td>
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
         </tr>
         <tr>
-            <td align="center">27</td>
-            <td align="center">28</td>
-            <td align="center">29</td>
-            <td align="center">30</td>
-            <td align="center"></td>
-            <td align="center"></td>
-            <td align="center"></td>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+            <td>30</td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
     </table>
-    </center>
 
     
 </body>

@@ -1,0 +1,22 @@
+<!-- z-indend / overflow: hidden auto -->
+
+<!DOCTYPE html>
+<head>
+    <title>16.css</title>
+    <style>
+        div {width: 100px; height: 100px; color: white; position: relative; overflow: hidden scroll;}
+
+        #div1 {background-color: orange; z-index: 10;}
+        #div2 {background-color: red; bottom:50px; z-index: 400;}
+        #div3 {background-color: blue; bottom:100px; z-index: 1;}
+        #div4 {background-color: yellow; bottom:150px; z-index: 5;}
+    </style>
+</head>
+<body>
+    <h1>Z-index를 통한 레이어 순서 변경</h1>
+    <div id="div1"><p>Orange 색상으로 보여지는 박스</p>Orange</div>
+    <div id="div2">Red</div>
+    <div id="div3">Blue</div>
+    <div id="div4">Yellow</div>
+</body>
+</html>

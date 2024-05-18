@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>various css effects (transition)</title>
+    <style>
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition-property: width, height;
+            transition-duration: 1.0s;
+            transition-timing-function: ease-in-out;
+        }
+        .square:hover {
+            width: 150px;
+            height: 150px;
+        }
+        .button {
+            color: black;
+            transition-property: color;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-out;
+        }
+        .button:hover{
+            color: red;
+        }
+        .image{
+            transition-property: transform;
+            transition-duration: 1s;
+            transition-timing-function: ease-out;
+        }
+        .image:hover {
+            transform: rotate(180deg)
+        }
+        .gradiant {
+            background-image: linear-gradient(to bottom, red, blue);
+            transition-property: background-image;
+            transition-duration: 2.0s;
+            transition-timing-function: ease;
+        }
+        .gradiant:hover {
+            background-image: linear-gradient(to bottom, blue, green);
+        }
+    </style>
+</head>
+<body>
+    <div class="square"></div>
+    <br>
+    <button class="button">Hover Me!</button>
+    <br>
+    <img src="class_images/JUN-adidas.jpeg" class="image">
+    <br>
+    <div class="gradient">"마우스를 올리면 색상이 변경됩니다."</div>
+</body>
+</html>

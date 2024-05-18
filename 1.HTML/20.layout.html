@@ -1,0 +1,59 @@
+<!--  width: 30% + width: 70%일 때
+        1. 패딩은 안쪽 여백인데 왜 영향이 가지 ?
+        2. 안쪽에 패딩 주려면 어떻게 해야함?!  -->
+
+<!DOCTYPE html>
+<head>
+    <title>20.layout</title>
+    <style>
+        header {
+            background-color: gray;
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+        nav ul {
+            list-style-type: none;
+        }
+        nav {
+            float: left;
+            width: 30%;
+            background-color: aqua;
+        }
+        article {
+            float: right;
+            width: 70%;
+            background-color: lightgray;
+        }
+        footer {
+            background-color: gray;
+            text-align: center;
+            padding: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cities</h1>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li>Seoul</li>
+                <li>Busan</li>
+                <li>Sejong</li>
+                <li>Jeju</li>
+            </ul>
+        </nav>
+        <article>
+            <h2>Seoul</h2>
+            <p>Seoul is.... explaination</p>
+            <p>Food hunting.... explaination</p>
+        </article>
+    </section>
+    <footer>
+        <p>Copyright</p>
+    </footer>
+</body>
+</html>
