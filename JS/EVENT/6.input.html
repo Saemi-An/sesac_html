@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea id="myTextArea" placeholder="Please enter."></textarea>
+    <script>
+        document.getElementById('myTextArea').addEventListener('copy', function() {
+            console.log('someone is stealing the text..');
+        });
+
+        document.getElementById('myTextArea').addEventListener('paste', function() {
+            console.log('someone is cheating..');
+        });
+
+        window.addEventListener('beforeunload', function() {
+            event.preventDefault();
+            event.returnValue = 'Please stay..???';
+        });
+    </script>
+</body>
+</html>

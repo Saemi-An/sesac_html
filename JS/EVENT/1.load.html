@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 돔은 html요소들로 구성됨. css와 js는 포함되지 않음. 따라서 css, img, js는 로딩이 안 되었을 수 있음
+        // 실무에서 무조건 들어가는 코드임!
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded.');
+        });
+
+        // dom, html, css, js 모두 가져옴
+        window.onload = function (){
+            console.log('Every contents are loaded');
+        };
+    </script>
+</body>
+</html>

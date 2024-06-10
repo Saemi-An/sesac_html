@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        #list_container {
+            border: 1px solid black;
+        }
+    </style> -->
+</head>
+<body>
+    <h1>To-Do List</h1>
+
+    <input type="text" id="input">
+    <button id="add_button">Add</button>
+
+    <div id="list_container">
+        <ul id="ul">
+
+        </ul>
+    </div>
+</body>
+    <script>
+
+        document.getElementById('add_button').addEventListener('click', function() {
+            const inputValue = document.getElementById('input').value;
+            const list = document.getElementById('ul');
+
+            const newItem = document.createElement('li');
+            newItem.textContent = inputValue;
+
+            list.appendChild(newItem);
+
+        });
+    </script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <p id="myText">Change the text color to toggle.</p>
+    <button onclick="toggleTextColor()">Text Toggle</button>
+    <script>
+        function toggleTextColor(){
+            var textElement = document.getElementById('myText');
+            // console.log(textElement)
+
+            if (textElement.style.color == 'blue') {
+                textElement.style.color = 'red';
+            } else {
+                textElement.style.color = 'blue';
+            }}
+
+
+    </script>
+</body>
+</html>

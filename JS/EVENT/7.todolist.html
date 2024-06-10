@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>To-Do List</h1>
+    <input type="text" id="new-todo">
+    <button id="add-todo">Add</button>
+
+    <div>
+        <ul id="todo-list"></ul>
+    </div>
+
+    <script>
+        // 추가 버튼을 통해 입력한 글자를 아래 리스트로 추가한다.
+
+        document.getElementById('add-todo').addEventListener('click', function() {
+            const newToDo = document.getElementById('new-todo').value;
+        
+            const todoList = document.getElementById('todo-list');
+            
+            // 새로운 노드 만들기 : li와 해당 데이터를 갖고 있는 돔 요소를 통해
+            const newItem = document.createElement('li');
+            newItem.textContent = newToDo;
+
+            todoList.appendChild(newItem);
+
+            document.getElementById('new-todo').value = '';
+        });
+
+    </script>
+</body>
+</html>

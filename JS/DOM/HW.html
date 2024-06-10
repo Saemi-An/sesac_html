@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = 'HW.js'></script>
+    <link rel='stylesheet' href='HW.css'>
+    <style>
+        #calculator {
+            /* border: 1px, solid, black; */
+            background-color: rgb(129, 212, 227);
+            width: 300px;
+            /* height: 300px; */
+            margin: 5% auto;
+            padding: 10px;
+        }
+        input {
+            width: 100%;
+            height: 48px;
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        .flex-container {
+            /* background-color: red; */
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        button {
+            width: 62.5px;
+            height: 48px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <input id="result" type="text" readonly>
+        <div class='flex-container' id="row1">
+            <button onclick="appendSymbol(this.innerText)">+</button>
+            <button onclick="appendSymbol(this.innerText)">-</button>
+            <button onclick="appendSymbol(this.innerText)">*</button>
+            <button onclick="appendSymbol(this.innerText)">/</button>
+        </div>
+        <div class='flex-container' id="row2">
+            <button onclick="appendNumber(this.innerText)">7</button>
+            <button onclick="appendNumber(this.innerText)">8</button>
+            <button onclick="appendNumber(this.innerText)">9</button>
+            <button onclick="calculate()">=</button>
+        </div>
+        <div class='flex-container' id="row3">
+            <button onclick="appendNumber(this.innerText)">4</button>
+            <button onclick="appendNumber(this.innerText)">5</button>
+            <button onclick="appendNumber(this.innerText)">6</button>
+            <button onclick="clearResult()">C</button>
+        </div>
+        <div class='flex-container' id="row4">
+            <button onclick="appendNumber(this.innerText)">1</button>
+            <button onclick="appendNumber(this.innerText)">2</button>
+            <button onclick="appendNumber(this.innerText)">3</button>
+            <button onclick="appendNumber(this.innerText)">0</button>
+        </div>
+    </div>
+    <script>
+        function appendSymbol(symbol) {
+            input = document.getElementById('result');
+            lastInput = input.value.slice(-1);
+            // lastInput = input.value.charAt(input.value.length - 1);
+            // lastInput = input.value.substring(input.value.length -1);
+
+            // if (lastInput === symbol) {
+            //     input.value += symbol;
+            // }
+            if(checkLastSymbol()) {
+                input.value = input.value.slice(0, -1);
+                input.value += symbol;
+            } else {
+                input.value += symbol;
+                // withoutLast = input.value.slice(0, -1);
+                // withoutLast += symbol;
+            }
+
+            
+
+        }
+        function checkLastSymbol() {
+            input = document.getElementById('result');
+            lastInput = input.value.slice(-1);
+            if (isSymbol(lastInput)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function isSymbol(symbol) {
+            symbols = ['+', '-', '*', '/'];
+            checkInput = symbols.includes(symbol);
+
+            return checkInput;
+        }
+        
+
+        function appendNumber(number) {
+            document.getElementById('result').value += number;
+        }
+
+        function clearResult() {
+            document.getElementById('result').value = '';
+        }
+        function calculate() {
+            input = document.getElementById('result');
+            try{
+                result = eval(input.value);
+                input.value = result;
+            }
+            catch(error) {
+                alert("Error")
+                clearResult()
+            }
+
+        }
+    </script>
+</body>
+</html>

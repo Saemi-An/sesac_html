@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        td {
+            color: black;
+        
+        }
+    </style> -->
+</head>
+<body>
+    <h1>Table</h1>
+    <table>
+        <tr>
+            <td>cell 1</td>
+            <td>cell 2</td>
+            <td>cell 3</td>
+        </tr>
+        <tr>
+            <td>cell 4</td>
+            <td>cell 5</td>
+            <td>cell 6</td>
+        </tr>
+        <tr>
+            <td>cell 7</td>
+            <td>cell 8</td>
+            <td>cell 9</td>
+        </tr>
+        <tr>
+            <td>cell 10</td>
+            <td>cell 11</td>
+            <td>cell 12</td>
+        </tr>
+        <tr>
+            <td>cell 13</td>
+            <td>cell 14</td>
+            <td>cell 15</td>
+        </tr>
+        <tr>
+            <td>cell 16</td>
+            <td>cell 17</td>
+            <td>cell 18</td>
+        </tr>
+    </table>
+    <br>    
+    <button onclick="changeSingleCellColor()">Change Single Cell Color</button>
+    <button onclick="changeEveryCellColor()">Change Every Cell Color</button>
+    <button onclick="changeOddCellColor()">Change Odd Cell Color</button>
+    <script>
+        function changeSingleCellColor() {
+            var cells = document.getElementsByTagName('td');
+            cells.style.backgourndColor = 'blue'
+        }
+        function changeEveryCellColor() {
+            // // every cell
+            var cells = document.getElementsByTagName('td');
+            // cells.style.color = 'red';
+            // 모든 셀을 반복적으로 순회
+            for (var i = 0; i < cells.length; i++) {
+                cells[i].style.backgroundColor = 'red';
+            }
+        }
+        function changeOddCellColor() {
+            var cells = document.getElementsByTagName('td');
+            for (var j = 0; j < cells.length; j += 2) {
+                cells[j].style.backgroundColor = 'orange';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS : Switch-Case</h1>
+    <select id='fruitselector' onchange="printSelectedWord()">
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+        <option value="strawberry">Strawberry</option>
+    </select>
+    <p>
+    <div id="fruitResult"></div>
+    <script>
+        function printSelectedWord() {
+            result = document.getElementById('fruitselector').value;
+            fruitResult = document.getElementsById('fruitResult');
+            switch (result){
+                case 'apple':
+                    break;
+                case 'banana':
+                    fruitResult.innerHTML = '<b>Banana</b>is selected.'
+                    break;
+                case 'strawberry':
+                    fruitResult.innerHTML = '<b>Strawberry</b>is selected.'
+                    break;
+            }
+        }
+
+    </script>
+</body>
+</html>

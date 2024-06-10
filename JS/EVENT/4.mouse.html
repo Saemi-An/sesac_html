@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text", id="myInput">
+    <div id="myElement" style="width: 1000px; height: 1000px; background-color: lightblue;">Here!</div>
+
+    <script>
+        // 마우스가 타겟 플레이스에서 호버되고 있음
+        document.getElementById('myElement').addEventListener('mouseover', function() {
+            console.log('Mouse hovering')
+        });
+        // 마우스가 타겟 플레이스에서 나감
+        document.getElementById('myElement').addEventListener('mouseout', function() {
+            console.log('Mouse over')
+        });
+
+        // 입력창 클릭됨
+        document.getElementById('myInput').addEventListener('focus', function() {
+            console.log('input field clicked')
+        })
+        // 입력창에서 나오게됨
+        document.getElementById('myInput').addEventListener('blur', function() {
+            console.log('got out of input field')
+        })
+        // 입력창에서 입력값이 변하고 있음 ???
+        document.getElementById('myInput').addEventListener('change', function() {
+            console.log('입력값이 변경됨');
+        });
+
+
+        document.getElementById('myElement').addEventListener('contextmenu', function() {
+            console.log('마우스 우클릭이 요청됨');
+        })
+
+        document.getElementById('myElement').addEventListener('contextmenu', function() {
+            event.preventDefault();  // 이벤트의 기본 기능을 막음. 예를들어 캡쳐 안되는 사이트들
+            console.log('마우스 우클릭을 금지시킴');
+        });
+
+        window.addEventListener('resize', function(){
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            console.log(`Window size changed: ${width} x ${height}`);
+        });
+
+        window.addEventListener('scroll', function(){
+            const scrollPosition = window.pageYOffset;
+
+            console.log('page scrolling' + '세로의 위치는: ' + scrollPosition);
+        });
+
+    </script>
+</body>
+</html>
